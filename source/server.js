@@ -271,6 +271,7 @@ app.get('/serverdata.js', (req, res) => {
 });
 
 app.get('/api/latestversion', (req, res) => {
+  /*
   sysinfo.getUngitLatestVersion()
     .then((latestVersion) => {
       if (!semver.valid(config.ungitDevVersion)) {
@@ -294,6 +295,8 @@ app.get('/api/latestversion', (req, res) => {
     }).catch((err) => {
       res.json({ latestVersion: config.ungitDevVersion, currentVersion: config.ungitDevVersion, outdated: false });
     });
+    */
+    res.json({ latestVersion: config.ungitDevVersion, currentVersion: config.ungitDevVersion, outdated: false });
 });
 
 app.get('/api/ping', (req, res) => res.json({}));
